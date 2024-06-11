@@ -1,1 +1,3 @@
 google_images_download==2.8.0
+requests
+bs4
