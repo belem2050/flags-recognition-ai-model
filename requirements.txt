@@ -1,2 +1,4 @@
 requests
 bs4
+tensorflow
+scikit-learn
