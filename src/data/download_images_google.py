@@ -43,8 +43,10 @@ def download_images(query : str, num_pages=1, limit_per_page=20, output_dir="dat
 
 # Example usage
 if __name__ =="__main__":
-    countries =["Burkina Faso", "Ivory coast", "France"]
+
+    countries = ["Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroon", "Central African Republic", "Chad", "Comoros", "Congo", "Democratic Republic of the Congo", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Eswatini", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Ivory Coast", "Kenya", "Lesotho", "Liberia", "Libya", "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Rwanda", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "South Sudan", "Sudan", "Tanzania", "Togo", "Tunisia", "Uganda", "Zambia", "Zimbabwe"]
+
 
     for country in countries:
         query = country + " flag"
-        download_images(query, num_pages=5, limit_per_page=5, output_dir=os.path.join("data", "raw", country.replace(" ", "_")))
+        download_images(query, num_pages=5, limit_per_page=50, output_dir=os.path.join("data", country.replace(" ", "_")))
