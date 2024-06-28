@@ -114,15 +114,16 @@ if __name__ =='__main__':
     data_dir = 'data'
     input_shape = (128, 128, 3)
     model_path = 'model/flag_recognition_model.h5'
-    image_to_predict_path = 'src/flags_samples/Burkina_Faso_test1.png'
+    image_to_predict_path = 'data/Somalia/Somalia_flag_8.jpg'
 
     flag_recongnition.preprocess_data(data_dir)
     number_of_classes = flag_recongnition.get_number_of_classes()
-    flag_recongnition.build_model(input_shape, number_of_classes)
-    flag_recongnition.fit_model()
-    flag_recongnition.save_model(model_path)
+    
+    # flag_recongnition.build_model(input_shape, number_of_classes)
+    # flag_recongnition.fit_model()
+    # flag_recongnition.save_model(model_path)
 
-    flag_recongnition.evaluate_model()
+    # flag_recongnition.evaluate_model()
 
     flag_recongnition.load_model(model_path)
     flag_recongnition.predict_image(image_to_predict_path)
